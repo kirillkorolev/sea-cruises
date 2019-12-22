@@ -1,0 +1,142 @@
+.description {
+  text-align: center;
+  background-image: url("../img/backgrounds/compass@1x.png"), url("../img/backgrounds/description-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 88px 88px, cover;
+  background-position: center 82px, top;
+  background-color: $background-blue;
+  padding: 153px 0 197px;
+  position: relative;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backgrounds/compass@2x.png"), url("../img/backgrounds/description-bg@2x.jpg");
+  }
+}
+
+.description::after {
+  position: absolute;
+  content: "";
+  width: 163px;
+  height: 300px;
+  background-image: url("../img/cable.png");
+  background-repeat: no-repeat;
+  background-size: 163px 300px;
+  left: 44.8%;
+  top: 451px;
+}
+
+.description__link {
+  display: inline-block;
+  vertical-align: top;
+  background-color: $light-blue;
+  color: $white;
+  width: 203px;
+  padding: 11px 0;
+}
+
+.description__link:hover {
+  background-color: $light-blue-hover;
+}
+
+.description__link:active {
+  background-color: $light-blue-active;
+}
+
+.description__small-letters-part,
+.description__big-letters-part {
+  font-family: "Roboto-Slab", "Times New Roman", serif;
+}
+
+.description__small-letters-part {
+  font-size: 35px;
+  line-height: 48px;
+  letter-spacing: 0.07em;
+  margin-bottom: 32px;
+}
+
+.description__big-letters-part {
+  font-size: 100px;
+  line-height: 100px;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  margin-bottom: 47px;
+}
+
+@media (max-width: $tablet-width) {
+  .description {
+    padding: 213px 0 209px;
+    background-position: center 133px, top;
+    background-image: url("../img/backgrounds/compass@1x.png"), url("../img/backgrounds/description-bg-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/backgrounds/compass@2x.png"), url("../img/backgrounds/description-bg-tablet@2x.jpg");
+    }
+  }
+
+  .description__small-letters-part {
+    font-size: 26px;
+    margin-bottom: 0;
+  }
+
+  .description__big-letters-part {
+    font-size: 72px;
+    line-height: 72px;
+    margin-bottom: 12px;
+  }
+
+  .description::after {
+    background-image: url("../img/cable-tablet.png");
+    width: 130px;
+    height: 240px;
+    background-size: 130px 240px;
+    left: 42.5%;
+    top: 402px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .description__small-letters-part {
+    font-size: 20px;
+  }
+
+  .description__big-letters-part {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 37px;
+  }
+
+  .description::after {
+    display: none;
+
+    background-image: url("../img/cable-mobile.png");
+    width: 130px;
+    height: 240px;
+    left: 26.5%;
+    top: 383px;
+  }
+
+  .description__link {
+    position: relative;
+  }
+
+  .description__link::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/cable-mobile.png");
+    width: 130px;
+    height: 240px;
+    left: 25px;
+    bottom: -251px;
+  }
+
+  .description {
+    padding: 93px 15px 209px;
+    background-size: 70px 70px, cover;
+    background-position: center 25px, bottom;
+    background-image: url("../img/backgrounds/compass-mobile@1x.png"), url("../img/backgrounds/description-bg-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/backgrounds/compass-mobile@2x.png"), url("../img/backgrounds/description-bg-mobile@2x.jpg");
+    }
+  }
+}
